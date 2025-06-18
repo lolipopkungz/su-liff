@@ -1,0 +1,31 @@
+@import 'https://cdn.jsdelivr.net/gh/lazywasabi/thai-web-fonts@7/fonts/LINESeedSansTH/LINESeedSansTH.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.radix-themes {
+	--color-background: transparent;
+}
+
+body {
+	background-color: #373A71;
+}
+
+* {
+	box-sizing: border-box !important;
+	font-family: 'LINE Seed Sans TH', sans-serif !important;
+}
+
+.nav {
+	@apply flex items-center flex-col content-center w-1/3 text-[#ABABAB] hover:text-[#5C5AA3] cursor-pointer transition-all;
+}
+
+.nav.active {
+	@apply flex items-center flex-col content-center w-1/3 text-[#5C5AA3];
+}
+
+:root {
+	touch-action: pan-x pan-y;
+	height: 100%
+}

@@ -1,0 +1,27 @@
+{
+  "name": "eco-stamp",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@line/liff": "2.26.1",
+    "@radix-ui/themes": "^3.2.1",
+    "axios": "^1.9.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-icons": "^5.5.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.6",
+    "@types/react-dom": "19.1.5",
+    "@vitejs/plugin-react": "4.5.0",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.5",
+    "tailwindcss": "^3.4.17",
+    "typescript": "5.8.3",
+    "vite": "6.3.5"
+  }
+}
