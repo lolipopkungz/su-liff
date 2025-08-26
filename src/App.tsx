@@ -60,7 +60,7 @@ function App() {
 		switch (tab) {
 			case "home": return (<Home connectCMU={connetCMU} profile={profile} liffData={liffData} />);
 			case 'connected': return (<Connected setTab={setTab} liffData={liffData} profile={profile} connectCMU={connetCMU} />);
-			case "noti": return (<Noti setTab={setTab} profile={profile} />);
+			case "noti": return (<Noti setTab={setTab} profile={profile} liffData={liffData} />);
 			case "activity": return (<Activity setTab={setTab} profile={profile} liffData={liffData} />);
 		}
 	}

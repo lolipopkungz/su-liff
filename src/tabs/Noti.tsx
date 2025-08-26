@@ -55,7 +55,7 @@ function Noti({ setTab, liffData }: Props) {
 				<Flex direction="column" gap="3">
 
 					{notifications && notifications.length > 0
-						? notifications.map((noti: any, idx) => {
+						? notifications.map((noti: any, idx: number) => {
 							const match = noti.title.match(/(\d+)\s*คะแนน/);
 							const points = match ? match[1] : "0";
 							const parts = noti.title.split(/(\d+\s*คะแนน)/);
@@ -67,7 +67,7 @@ function Noti({ setTab, liffData }: Props) {
 								>
 									<HiBell className="text-5xl text-blue-700" />
 									<span className="text-blue-700">
-										{parts.map((part: any, i) =>
+										{parts.map((part: any, i: any) =>
 											/(\d+\s*คะแนน)/.test(part) ? (
 												<strong key={i} className="text-blue-800">
 													{part}
