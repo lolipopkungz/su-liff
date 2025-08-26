@@ -152,6 +152,10 @@ function Activity({ setTab, profile, liffData }: Props) {
 		}, {
 			headers: { "Content-Type": "application/json", "x-line": localStorage.getItem("lineId") ?? "" },
 		});
+		if (response.data.status) {
+			alert("ส่งกิจกรรมสำเร็จ");
+			setTab("home");
+		}
 
 	}
 
