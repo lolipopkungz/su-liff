@@ -21,7 +21,7 @@ function Home({ connectCMU, profile, liffData }: Props) {
 
 		const scope = `api://cmu/Mis.Account.Read.Me.Basicinfo offline_access`
 		const client_id = `b729125d-51bb-46c1-833c-51370957aa94`
-		const redirect_uri = `http://localhost:5173/callback/cmu`
+		const redirect_uri = `https://cmusu.com/callback/cmu`
 
 		window.location.href =
 			`https://login.microsoftonline.com/cf81f1df-de59-4c29-91da-a2dfd04aa751/oauth2/v2.0/authorize` +
