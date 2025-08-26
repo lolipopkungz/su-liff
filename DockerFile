@@ -1,17 +1,18 @@
-FROM node:22-slim as base
+FROM node:22-alpine AS builder
 
 WORKDIR /app
 
-COPY package*.json ./
-COPY yarn.lock ./
-RUN corepack enable
-
-RUN yarn install
+COPY package.json package-lock.json* pnpm-lock.yaml* bun.lockb* yarn.lock* ./
+RUN npm install --frozen-lockfile
 
 COPY . .
 
-RUN yarn build
+RUN npm run build
 
-EXPOSE 3000
+FROM nginx:alpine
 
-CMD ["npm", "preview"]
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
