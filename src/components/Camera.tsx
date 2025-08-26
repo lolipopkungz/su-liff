@@ -110,7 +110,7 @@ const FullscreenCamera = ({ setCam, capturedImage, setCapturedImage }: Props) =>
 	};
 
 	const handleConfirm = () => {
-		alert("ภาพได้รับการยืนยันแล้ว 🎉");
+		// alert("ภาพได้รับการยืนยันแล้ว 🎉");
 		setCam(false);
 		// ส่งรูปไป server ตรงนี้ได้
 	};
